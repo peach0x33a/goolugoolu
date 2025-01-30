@@ -1,0 +1,48 @@
+/* 添加以下新样式 */
+.navbar-nav .nav-link {
+    padding: 0.5rem 1rem !important;
+}
+
+.feature-item {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(248, 249, 250, 0.5);
+}
+
+/* 修正原有样式 */
+.logo {
+    font-size: calc(2rem + 3vw);
+    font-weight: 700;
+    background: linear-gradient(45deg, #4285f4, #34a853);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.search-box {
+    width: min(580px, 90%);
+    border: 1px solid #dee2e6;
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+    transition: box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: white;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        margin-top: 1rem;
+    }
+    
+    .feature-item {
+        margin-bottom: 1rem;
+    }
+}
