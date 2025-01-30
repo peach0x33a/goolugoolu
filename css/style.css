@@ -14,35 +14,104 @@
     background-color: rgba(248, 249, 250, 0.5);
 }
 
-/* 修正原有样式 */
-.logo {
-    font-size: calc(2rem + 3vw);
-    font-weight: 700;
-    background: linear-gradient(45deg, #4285f4, #34a853);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    letter-spacing: -2px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-}
 
-.search-box {
+/* 在css/style.css中添加 */
+.logo-container {
     width: min(580px, 90%);
-    border: 1px solid #dee2e6;
-    border-radius: 2rem;
-    padding: 0.5rem 1.5rem;
-    transition: box-shadow 0.3s ease;
+    margin: 0 auto 30px;
 }
 
+.goolugoolu-logo {
+    width: 100%;
+    height: auto;
+}
+
+.goolugoolu-logo text {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+/* 颜色定义 */
+.g { fill: #5483DB; }
+.o1 { fill: #CE3E49; }
+.o2 { fill: #E1BC4B; }
+.l { fill: #55B85F; }
+.u { fill: #CE3E49; }
+
+/* 响应式调整 */
 @media (max-width: 768px) {
-    .navbar-collapse {
-        background-color: white;
-        padding: 1rem;
-        box-shadow: 0 2px 4px rgba(0,0,0,.1);
-        margin-top: 1rem;
+    .goolugoolu-logo text {
+        font-size: 60px;
     }
-    
-    .feature-item {
-        margin-bottom: 1rem;
+    .logo-container {
+        width: 320px;
     }
+}
+
+/* Google风格搜索框 */
+.google-style-search {
+    width: min(584px, 90%);
+    position: relative;
+}
+
+.search-container {
+    height: 44px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    transition: all 0.3s;
+}
+
+.search-container:hover {
+    box-shadow: 0 1px 6px rgba(32,33,36,.28);
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    fill: #9aa0a6;
+    margin-right: 12px;
+}
+
+.voice-icon {
+    width: 24px;
+    height: 24px;
+    fill: #4285f4;
+    margin-left: 12px;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    padding: 8px 0;
+}
+
+.search-input:focus {
+    border: none;
+    box-shadow: none;
+}
+
+/* Google风格按钮 */
+.google-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-size: 14px;
+    padding: 0 16px;
+    height: 36px;
+    min-width: 120px;
+}
+
+.google-btn:hover {
+    border: 1px solid #dadce0;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
 }

@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goolugoolu</title>
-    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <main class="flex-grow-1 container text-center mt-5">
-        <div class="logo mb-4">Goolugoolu</div>
-        <div class="search-box mx-auto mb-4">
 
-            <input type="text" class="form-control border-0">
+    <main class="flex-grow-1 container text-center mt-5">
+        <!-- 修改index.html中的logo部分 -->
+        <div class="logo-container">
+            <img src="/img/logo.svg">
         </div>
-        <div class="buttons gap-3"> <!-- 按钮间距 -->
-            <button class="btn btn-light border py-2 px-4">Goolugoolu 搜索</button>
-            <button class="btn btn-light border py-2 px-4">手气不错</button>
+        <!-- 修改后的搜索框 -->
+        <div class="google-style-search mx-auto mb-4">
+            <div class="search-container">
+                <svg class="search-icon" focusable="false" viewBox="0 0 24 24">
+                    <path
+                        d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+                </svg>
+                <input type="text" class="search-input" placeholder="Ave Mujica">
+            </div>
+        </div>
+
+        <div class="buttons gap-3">
+            <button class="btn google-btn">Goolugoolu 搜索</button>
+            <button class="btn google-btn">手气不错</button>
         </div>
     </main>
 
-    <!-- 完整页脚 -->
     <footer class="bg-light py-3 mt-auto">
         <div class="container d-flex flex-wrap justify-content-between align-items-center">
             <div class="d-flex gap-4 mb-2 mb-md-0">
-                <a href="about/" class="nav-link text-dark">关于Goolugoolu</a>
+                <a href="/about/" class="nav-link text-dark">关于Goolugoolu</a>
                 <a href="#" class="text-decoration-none text-secondary">广告</a>
                 <a href="#" class="text-decoration-none text-secondary">商务</a>
                 <a href="https://github.com/peach0x33a/goolugoolu" class="text-decoration-none text-secondary">项目地址</a>
@@ -37,8 +47,7 @@
             </div>
         </div>
     </footer>
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
