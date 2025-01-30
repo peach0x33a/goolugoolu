@@ -146,3 +146,24 @@
         }
     }
 }
+
+/* 在css/style.css中添加 */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* 桌面端最大宽度 */
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .responsive-img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-img {
+        max-width: 95%;
+    }
+}
