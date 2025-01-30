@@ -115,3 +115,34 @@
     border: 1px solid #dadce0;
     box-shadow: 0 1px 1px rgba(0,0,0,.1);
 }
+
+/* 在css/style.css中添加以下样式 */
+.logo-container {
+    width: min(580px, 90%);
+    margin: 0 auto 30px;
+    position: relative;
+}
+
+/* 通用图片缩放规则 */
+.logo-container img {
+    width: 100%;
+    height: auto;
+    display: block; /* 移除图片底部间隙 */
+    margin: 0 auto; /* 居中 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .logo-container {
+        width: 80%; /* 增加移动端显示比例 */
+        max-width: 400px; /* 设置最大宽度防止过度放大 */
+    }
+
+    /* 针对小屏幕手机优化 */
+    @media (max-width: 480px) {
+        .logo-container {
+            width: 95%;
+            margin-bottom: 15px;
+        }
+    }
+}

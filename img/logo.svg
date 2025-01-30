@@ -1,6 +1,7 @@
 <svg 
  xmlns="http://www.w3.org/2000/svg"
  xmlns:xlink="http://www.w3.org/1999/xlink"
- width="400px" height="71px">
+ width="400px" height="71px"
+ preserveAspectRatio="xMidYMid meet">
 <text kerning="auto" font-family="Adobe Heiti Std" fill="rgb(0, 0, 0)" transform="matrix( 1.62221926576529, 0, 0, 1.62221926576529,0.62926278980083, 54.0533217425576)" font-size="43.151px"><tspan font-size="43.151px" font-family="MiSans VF" fill="#5483DB">G</tspan><tspan font-size="43.151px" font-family="MiSans VF" fill="#CE3E49">o</tspan><tspan font-size="43.151px" font-family="MiSans VF" fill="#E1BC4B">o</tspan><tspan font-size="43.151px" font-family="MiSans VF" fill="#55B85F">l</tspan><tspan font-size="43.151px" font-family="MiSans VF" fill="#CE3E49">u</tspan><tspan font-size="43.151px" font-family="MiSans VF" fill="#FFFFFF">&#32;</tspan><tspan font-size="43.151px" font-family="MiSans VF" fill="#5483DB">g</tspan><tspan font-size="43.151px" font-family="MiSans VF" fill="#CE3E49">o</tspan><tspan font-size="43.151px" font-family="MiSans VF" fill="#E1BC4B">o</tspan><tspan font-size="43.151px" font-family="MiSans VF" fill="#55B85F">l</tspan><tspan font-size="43.151px" font-family="MiSans VF" fill="#CE3E49">u</tspan></text>
 </svg>
