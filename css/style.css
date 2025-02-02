@@ -1,57 +1,70 @@
-/* 添加以下新样式 */
+/* style.css 完整文件 */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #212529;
+    --card-bg: #ffffff;
+    --link-color: #0d6efd;
+    --border-color: #dee2e6;
+    --footer-bg: #f8f9fa;
+    --footer-text: #6c757d;
+    --btn-bg: #f8f9fa;
+    --btn-border: #f8f9fa;
+    --btn-text: #212529;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --card-bg: #2d2d2d;
+    --link-color: #79b8ff;
+    --border-color: #404040;
+    --footer-bg: #2d2d2d;
+    --footer-text: #b0b0b0;
+    --btn-bg: #3a3a3a;
+    --btn-border: #4d4d4d;
+    --btn-text: #e0e0e0;
+}
+
+/* 基础样式 */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    color: var(--link-color);
+}
+
+/* 导航栏 */
 .navbar-nav .nav-link {
     padding: 0.5rem 1rem !important;
 }
 
-.feature-item {
-    padding: 1.5rem;
-    border-radius: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.feature-item:hover {
-    transform: translateY(-5px);
-    background-color: rgba(248, 249, 250, 0.5);
-}
-
-
-/* 在css/style.css中添加 */
+/* Logo 容器 */
 .logo-container {
     width: min(580px, 90%);
     margin: 0 auto 30px;
+    position: relative;
 }
 
-.goolugoolu-logo {
+.logo-container img {
     width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-.goolugoolu-logo text {
-    font-family: Arial, sans-serif;
-    font-weight: 700;
-    font-size: 80px;
-    cursor: default;
-    transition: all 0.3s ease;
+/* 响应式图片 */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
 }
 
-/* 颜色定义 */
-.g { fill: #5483DB; }
-.o1 { fill: #CE3E49; }
-.o2 { fill: #E1BC4B; }
-.l { fill: #55B85F; }
-.u { fill: #CE3E49; }
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .goolugoolu-logo text {
-        font-size: 60px;
-    }
-    .logo-container {
-        width: 320px;
-    }
-}
-
-/* Google风格搜索框 */
+/* 搜索框样式 */
 .google-style-search {
     width: min(584px, 90%);
     position: relative;
@@ -59,7 +72,7 @@
 
 .search-container {
     height: 44px;
-    border: 1px solid #dfe1e5;
+    border: 1px solid var(--border-color);
     border-radius: 24px;
     display: flex;
     align-items: center;
@@ -78,13 +91,6 @@
     margin-right: 12px;
 }
 
-.voice-icon {
-    width: 24px;
-    height: 24px;
-    fill: #4285f4;
-    margin-left: 12px;
-}
-
 .search-input {
     flex: 1;
     border: none;
@@ -92,78 +98,102 @@
     font-size: 16px;
     background: transparent;
     padding: 8px 0;
+    color: var(--text-color);
 }
 
-.search-input:focus {
-    border: none;
-    box-shadow: none;
-}
-
-/* Google风格按钮 */
+/* 按钮样式 */
 .google-btn {
-    background-color: #f8f9fa;
-    border: 1px solid #f8f9fa;
+    background-color: var(--btn-bg);
+    border: 1px solid var(--btn-border);
     border-radius: 4px;
-    color: #3c4043;
+    color: var(--btn-text);
     font-size: 14px;
     padding: 0 16px;
     height: 36px;
     min-width: 120px;
+    transition: all 0.3s;
 }
 
 .google-btn:hover {
-    border: 1px solid #dadce0;
-    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    filter: brightness(1.15);
 }
 
-/* 在css/style.css中添加以下样式 */
-.logo-container {
-    width: min(580px, 90%);
-    margin: 0 auto 30px;
-    position: relative;
+/* 页脚样式 */
+footer {
+    background-color: var(--footer-bg) !important;
+    color: var(--footer-text);
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* 通用图片缩放规则 */
-.logo-container img {
-    width: 100%;
-    height: auto;
-    display: block; /* 移除图片底部间隙 */
-    margin: 0 auto; /* 居中 */
+footer a {
+    color: var(--footer-text);
+    opacity: 0.8;
 }
 
-/* 移动端适配 */
+footer a:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+/* 主题切换按钮 */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* 响应式设计 */
 @media (max-width: 768px) {
     .logo-container {
-        width: 80%; /* 增加移动端显示比例 */
-        max-width: 400px; /* 设置最大宽度防止过度放大 */
+        width: 80%;
+        max-width: 400px;
     }
-
-    /* 针对小屏幕手机优化 */
-    @media (max-width: 480px) {
-        .logo-container {
-            width: 95%;
-            margin-bottom: 15px;
-        }
-    }
-}
-
-/* 在css/style.css中添加 */
-.responsive-img {
-    width: 100%;
-    height: auto;
-    max-width: 600px; /* 桌面端最大宽度 */
-    display: block;
-    margin: 0 auto;
-}
-
-@media (max-width: 768px) {
+    
     .responsive-img {
         max-width: 80%;
+    }
+
+    .goolugoolu-logo text {
+        font-size: 60px;
     }
 }
 
 @media (max-width: 480px) {
+    .logo-container {
+        width: 95%;
+        margin-bottom: 15px;
+    }
+
     .responsive-img {
         max-width: 95%;
     }
+}
+
+/* 卡片样式 */
+.card {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    transition: all 0.3s;
+}
+
+.feature-item {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(248, 249, 250, 0.1);
 }
